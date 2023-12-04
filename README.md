@@ -1,1 +1,1 @@
-![Image](images\IMG_0054.JPG)
+<img width="30px" src="images\IMG_0054.JPG" alt="Cat W/ Sunglasses" />
