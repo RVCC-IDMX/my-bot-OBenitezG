@@ -161,6 +161,8 @@ public
 
 ### vscode ###
 .vscode/*
+config.json
+.env
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
