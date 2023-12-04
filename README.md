@@ -1,1 +1,1 @@
-<img width="500px" src="images\IMG_0054.JPG" alt="Cat W/ Sunglasses" />
+<img width="500px" src="images\IMG_0054.JPG" alt="Secret Agent Cat" />
