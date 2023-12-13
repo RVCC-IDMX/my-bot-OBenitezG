@@ -1,7 +1,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const {
-  Client, Collection, Events, GatewayIntentBits,
+  Client, Collection, Events, GatewayIntentBits, EmbedBuilder,
 } = require('discord.js');
 const { token } = require('./config.json');
 
@@ -31,6 +31,24 @@ client.once(Events.ClientReady, (readyClient) => {
 });
 
 client.on(Events.InteractionCreate, async (interaction) => {
+  if (interaction.isButton()) {
+    const { customId } = interaction;
+    if (customId === 'view more') {
+      const viewmoreEmbed = new EmbedBuilder()
+        .setColor(0x0099FF)
+        .setTitle('RVCC IDMX Discord Bot Repo')
+        .setURL('https://github.com/RVCC-IDMX/my-bot-OBenitezG')
+        .setAuthor({ name: 'Obdulio Benitez Garcia', iconURL: 'https://i.imgur.com/RJBSqwk.jpeg', url: 'https://github.com/OBenitezG' })
+        .setThumbnail('https://i.imgur.com/HRVdoRD.png')
+        .setImage('https://i.imgur.com/rhggfIZ.png')
+        .setTimestamp()
+        .setFooter({ text: 'Final Project' });
+      await interaction.deferUpdate();
+      await interaction.channel.send({ embeds: [viewmoreEmbed] });
+      return;
+    }
+  }
+
   if (!interaction.isChatInputCommand()) return;
   const command = interaction.client.commands.get(interaction.commandName);
 
