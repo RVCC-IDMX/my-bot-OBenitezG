@@ -21,6 +21,11 @@ module.exports = {
       f: cowChoice,
     });
 
-    await interaction.reply(`\`\`\`${cowMessage}\`\`\``);
+    if (cowMessage.length <= 2000) {
+      await interaction.reply(`\`\`\`${cowMessage}\`\`\``);
+    }
+    else {
+      await interaction.reply('This cow is too big!');
+    }
   },
 };
