@@ -38,6 +38,6 @@
     "css.format.newlineBetweenRules": true,
     "css.format.newlineBetweenSelectors": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll": "explicit"
     }
   }
