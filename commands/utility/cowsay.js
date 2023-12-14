@@ -18,7 +18,7 @@ module.exports = {
 
     const cowMessage = cowsay.say({
       text: cowText,
-      cow: cowChoice,
+      f: cowChoice,
     });
 
     await interaction.reply(`\`\`\`${cowMessage}\`\`\``);
