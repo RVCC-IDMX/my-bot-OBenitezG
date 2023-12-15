@@ -4,7 +4,7 @@ const {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('repo')
+    .setName('guide')
     .setDescription('Link to my GitHub repo page.'),
   async execute(interaction) {
     const viewmorebutton = new ButtonBuilder()
